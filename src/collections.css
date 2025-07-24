@@ -1,0 +1,152 @@
+ .collection-color {
+     color: #fff;
+ }
+
+ /* Colores por colección */
+ .dream-garage {
+     background-color: #9b59b6;
+ }
+
+ .batman {
+     background-color: #2c3e50;
+ }
+
+ .art-cars {
+     background-color: #e74c3c;
+ }
+
+ .premium {
+     background-color: #f39c12;
+ }
+
+ .entertainment {
+     background-color: #1abc9c;
+ }
+
+ .surf {
+     background-color: #3498db;
+ }
+
+ .race-team {
+     background-color: #e67e22;
+ }
+
+ .hot-trucks {
+     background-color: #d35400;
+ }
+
+ .exotics {
+     background-color: #27ae60;
+ }
+
+ .rescue {
+     background-color: #c0392b;
+ }
+
+ .slammed {
+     background-color: #8e44ad;
+ }
+
+ .wagons {
+     background-color: #16a085;
+ }
+
+ .first-response {
+     background-color: #e74c3c;
+ }
+
+ .modified {
+     background-color: #f1c40f;
+     color: #333;
+ }
+
+ .compact-kings {
+     background-color: #2ecc71;
+ }
+
+ .mega-bite {
+     background-color: #9b59b6;
+ }
+
+ .screen-time {
+     background-color: #3498db;
+ }
+
+ .treasure-hunt {
+     background: linear-gradient(45deg, #f1c40f, #e67e22);
+     color: #333;
+     font-weight: bold;
+ }
+
+ .gassers {
+     background-color: #74C365;
+ }
+
+ .rod-squad {
+     background-color: #696969;
+ }
+
+ .metro {
+     background-color: silver;
+ }
+
+ .drag-strip {
+     background-color: #E5E4E2;
+ }
+
+ .celebration {
+     background-color: #91D8EB;
+ }
+
+ .tooned {
+     background-color: #5f9ea0;
+ }
+
+ .dirt {
+     background-color: #CD7F32;
+ }
+
+ .fast-transit {
+     background-color: #FBB912;
+ }
+
+ .rolling-metal {
+     background-color: #D8D8D8;
+ }
+
+ .reverse-rake {
+     background-color: #27993B;
+ }
+
+ .xtreme-sports {
+     background-color: #FFA52C;
+ }
+
+ .lets-race {
+     background-color: #DC143C;
+ }
+
+ .roadsters {
+     background-color: #353839;
+ }
+
+ .ride-ons {
+     background-color: #A5CEEF;
+ }
+
+ .factory-fresh {
+     background-color: #77B5FE;
+ }
+
+ .ev {
+     background-color: #94C83C;
+ }
+
+ .j-imports {
+     background-color: #54CBF5;
+ }
+
+ .new-badge {
+     background-color: #e51937;
+     color: white;
+ }
