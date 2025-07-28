@@ -1,30 +1,34 @@
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
+import DarkModeToggle from "./DarkModeToggle";
 
-export default function Header() {
+export default function Header({ activo, setActivo }) {
     const [menuAbierto, setMenuAbierto] = useState(false);
 
     const links = [
-        { texto: "Mi colección", href: "#coleccion" },
+        { texto: "Mi colección", href: "home" },
+        { texto: "Estadísticas", href: "estadisticas" },
         { texto: "Favoritos", href: "#favoritos" },
         { texto: "Años", href: "#años" },
     ];
 
     return (
-        <header className="bg-white dark:bg-gray-900 shadow-md sticky top-0 z-50">
+        <header className="bg-blue-700 dark:bg-blue-900 text-white shadow-md sticky top-0 z-50">
+            {/*bg-white dark:bg-gray-900 shadow-md sticky top-0 z-50">*/}
             <div className="container mx-auto px-4 py-3 flex items-center justify-between">
-                <h1 className="text-xl font-bold text-gray-800 dark:text-white">🚗 Mi Garage Hot Wheels</h1>
-
-                <nav className="hidden md:flex gap-6">
+                <h1 className="text-2xl font-bold tracking-wide">🚗 Mi Garage Hot Wheels</h1>
+                {/* text-xl font-bold text-gray-800 dark:text-white */}
+                <nav className="hidden md:flex gap-6" style={{ alignItems: "center" }}>
                     {links.map((link) => (
                         <a
                             key={link.href}
                             href={link.href}
-                            className="text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition"
+                            className="text-white dark:text-gray-200 hover:text-blue-200 dark:hover:text-blue-400 transition"
                         >
                             {link.texto}
                         </a>
                     ))}
+                    <DarkModeToggle activo={activo} setActivo={setActivo} />
                 </nav>
 
                 {/* Menú móvil */}

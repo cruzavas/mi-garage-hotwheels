@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { supabase } from '../supabaseClient';
 
-export default function Filtros({ filtro, setFiltro }) {
+export default function Filters({ filtro, setFiltro }) {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
