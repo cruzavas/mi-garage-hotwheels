@@ -1,4 +1,4 @@
-# Mi Garage Hot Wheels
+# [Mi Garage Hot Wheels](https://mi-garage-hotwheels.vercel.app/)
 
 Este es un sitio web para gestionar tu colección de Hot Wheels. Incluye:
 
@@ -27,3 +27,5 @@ Este es un sitio web para gestionar tu colección de Hot Wheels. Incluye:
 - `components/`: componentes funcionales con TailwindCSS.
 
 ¡Disfruta organizando tu colección!
+
+La plantilla inicial fue hecha por chatGPT, los demás cambios los voy agregando cuando se me ocurren :sweat_smile:.
