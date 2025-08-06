@@ -17,7 +17,7 @@ export default function Header({ activo, setActivo }) {
             <div className="container mx-auto px-4 py-3 flex items-center justify-between">
                 <h1 className="text-2xl font-bold tracking-wide">🚗 Mi Garage Hot Wheels</h1>
                 {/* text-xl font-bold text-gray-800 dark:text-white */}
-                <nav className="hidden md:flex gap-6" style={{ alignItems: "center" }}>
+                <nav className="hidden md:flex gap-6 items-center">
                     {links.map((link) => (
                         <a
                             key={link.href}
