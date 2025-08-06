@@ -18,8 +18,8 @@ export default function App() {
 
   return (
     <Router>
-      <Header activo={modoOscuro} setActivo={setModoOscuro} />
       <div className={modoOscuro ? "dark bg-gray-900 text-white min-h-screen" : "bg-white text-black min-h-screen"}>
+        <Header activo={modoOscuro} setActivo={setModoOscuro} />
         {/* 
         <header className="bg-blue-700 dark:bg-blue-900 text-white shadow">
           <div className="container mx-auto px-4 py-4 flex justify-between items-center">
@@ -34,8 +34,8 @@ export default function App() {
           <Route path="/favoritos" element={<Favorites />} />
           <Route path="*" element={<Home />} />
         </Routes>
+        <Footer />
       </div>
-      <Footer />
     </Router>
   );
 }
