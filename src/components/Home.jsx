@@ -3,12 +3,14 @@ import { supabase } from '../supabaseClient';
 import AutoCard from "./AutoCard";
 import SearchBar from "./SearchBar";
 import Filters from "./Filters";
+import AutoModal from "./AutoModal";
 // import AutoForm from "./AutoForm";
 
 export default function Home() {
     const [autos, setAutos] = useState([]);
     const [filtro, setFiltro] = useState({ categoria: "", nuevo: null, anio: "" });
     const [busqueda, setBusqueda] = useState("");
+    const [autoSeleccionado, setAutoSeleccionado] = useState(null);
 
     useEffect(() => {
         cargarAutos();
@@ -44,9 +46,10 @@ export default function Home() {
             <Filters filtro={filtro} setFiltro={setFiltro} />
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mt-4">
                 {filtrarAutos().map((auto) => (
-                    <AutoCard key={auto.codigo} auto={auto} onDelete={eliminarAuto} />
+                    <AutoCard key={auto.codigo} auto={auto} onClick={setAutoSeleccionado} />
                 ))}
             </div>
+            <AutoModal auto={autoSeleccionado} onClose={() => setAutoSeleccionado(null)} />
             {/* <div className="mt-8">
                   <AutoForm onNuevoAuto={cargarAutos} />
                 </div> */}

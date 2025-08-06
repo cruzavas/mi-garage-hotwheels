@@ -1,11 +1,12 @@
 import React from "react";
-import { Trash2 } from "lucide-react";
+import { Star, StarOff } from "lucide-react";
 
-export default function AutoCard({ auto, onDelete }) {
+export default function AutoCard({ auto, onClick }) {
   const { codigo, modelo, categoria, serie, imagen, coleccion } = auto;
 
   return (
-    <div className="bg-white dark:bg-gray-800 shadow-lg rounded-2xl p-4 flex flex-col items-center transition hover:scale-105 hover:shadow-xl">
+    <div className="bg-white dark:bg-gray-800 shadow-lg rounded-2xl p-4 flex flex-col items-center transition hover:scale-105 hover:shadow-xl cursor-pointer"
+      onClick={() => onClick(auto)}>
       <img
         src={imagen}
         alt={modelo}
@@ -31,6 +32,12 @@ export default function AutoCard({ auto, onDelete }) {
           )}
         </div>
 
+        <button
+          className="absolute top-2 right-2 text-yellow-400"
+          title="Favorito"
+        >
+          {auto.favorito ? <Star fill="currentColor" /> : <StarOff />}
+        </button>
         {/*  <button
           onClick={() => onDelete(codigo)}
           className="mt-4 inline-flex items-center gap-1 px-3 py-1.5 bg-red-500 hover:bg-red-600 text-white text-sm font-medium rounded-lg transition"

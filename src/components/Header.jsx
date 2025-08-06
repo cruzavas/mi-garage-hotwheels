@@ -8,8 +8,7 @@ export default function Header({ activo, setActivo }) {
     const links = [
         { texto: "Mi colección", href: "home" },
         { texto: "Estadísticas", href: "estadisticas" },
-        { texto: "Favoritos", href: "#favoritos" },
-        { texto: "Años", href: "#años" },
+        { texto: "Favoritos", href: "favoritos" },
     ];
 
     return (

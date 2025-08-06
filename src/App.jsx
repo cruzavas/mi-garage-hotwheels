@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
 import Stadistics from "./components/Stadistics";
+import Favorites from "./components/Favorites";
 import Footer from "./components/Footer";
 
 export default function App() {
@@ -19,9 +20,10 @@ export default function App() {
       </header> */}
         <Header activo={modoOscuro} setActivo={setModoOscuro} />
         <Routes>
-          <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
           <Route path="/estadisticas" element={<Stadistics />} />
+          <Route path="/favoritos" element={<Favorites />} />
+          <Route path="*" element={<Home />} />
         </Routes>
         <Footer />
       </div>
