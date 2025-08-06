@@ -4,6 +4,7 @@ import AutoCard from "./AutoCard";
 import SearchBar from "./SearchBar";
 import Filters from "./Filters";
 import AutoModal from "./AutoModal";
+import AutoCardSkeleton from "./AutoCardSkeleton";
 // import AutoForm from "./AutoForm";
 
 export default function Home() {
@@ -11,15 +12,18 @@ export default function Home() {
     const [filtro, setFiltro] = useState({ categoria: "", nuevo: null, anio: "" });
     const [busqueda, setBusqueda] = useState("");
     const [autoSeleccionado, setAutoSeleccionado] = useState(null);
+    const [cargando, setCargando] = useState(true);
 
     useEffect(() => {
         cargarAutos();
     }, []);
 
     const cargarAutos = async () => {
+        setCargando(true);
         const { data, error } = await supabase.from("autos").select("*").neq("sold", true);
         if (error) console.error(error);
         else setAutos(data);
+        setCargando(false);
     };
 
     const eliminarAuto = async (codigo) => {
@@ -45,9 +49,11 @@ export default function Home() {
             </div>
             <Filters filtro={filtro} setFiltro={setFiltro} />
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mt-4">
-                {filtrarAutos().map((auto) => (
-                    <AutoCard key={auto.codigo} auto={auto} onClick={setAutoSeleccionado} />
-                ))}
+                {cargando
+                    ? Array.from({ length: 10 }).map((_, i) => <AutoCardSkeleton key={i} />)
+                    : filtrarAutos().map((auto) => (
+                        <AutoCard key={auto.codigo} auto={auto} onClick={setAutoSeleccionado} />
+                    ))}
             </div>
             <AutoModal auto={autoSeleccionado} onClose={() => setAutoSeleccionado(null)} />
             {/* <div className="mt-8">
